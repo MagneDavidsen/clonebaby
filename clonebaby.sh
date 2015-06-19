@@ -35,7 +35,6 @@ binaries=(
   git
   hub
   node
-  maven
 )
 
 # Install the binaries
@@ -48,22 +47,16 @@ brew install caskroom/cask/brew-cask
 brew cleanup
 
 apps=(
-  alfred
   dropbox
   google-chrome
-  firefox
   spotify
   java
   virtualbox
   vagrant
-  flash
   shiori
-  sublime-text3
   atom
-  flux
   mailbox
   vlc
-  transmission
   slack
   qlcolorcode
   quicklook-json
@@ -77,21 +70,15 @@ brew tap caskroom/versions
 echo "Installing apps.."
 brew cask install --appdir="/Applications" ${apps[@]}
 
-# Linking Alfred to your casks
-open /Applications/Alfred\ 2.app
-brew cask alfred link
-
 echo "Setting up zsh"
 curl -L http://install.ohmyz.sh | sh
-echo export PATH='/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:$PATH' >> ~/.zshrc # <- TODO: Make idempotent
 
-#TODO: Dotfiles
-echo "Setting up VIM"
-cp -R dotfiles/.vim* ~
+echo "Cloning my dotfiles"
+git clone https://github.com/MagneDavidsen/dotfiles-zsh.git ~/.dotfiles # TODO: Check if directory exists
 
-#TODO: Terminal colors
+echo "Linking .zshrc"
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+
 #TODO: Settings (keyboard delay++)
-#TODO: Clean up zsh aliases
 
 exit 0
-
