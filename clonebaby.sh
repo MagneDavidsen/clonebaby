@@ -51,6 +51,7 @@ apps=(
   google-chrome
   spotify
   java
+  iterm2
   virtualbox
   vagrant
   shiori
@@ -77,7 +78,10 @@ echo "Cloning my dotfiles"
 git clone https://github.com/MagneDavidsen/dotfiles-zsh.git ~/.dotfiles # TODO: Check if directory exists
 
 echo "Linking .zshrc"
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -sf ~/.dotfiles/zshrc.zsh ~/.zshrc
+
+echo "Show hidden files"
+defaults write com.apple.finder AppleShowAllFiles YES
 
 #TODO: Settings (keyboard delay++)
 
