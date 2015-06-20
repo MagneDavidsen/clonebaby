@@ -51,6 +51,7 @@ apps=(
   google-chrome
   spotify
   java
+  iterm2
   virtualbox
   vagrant
   shiori
