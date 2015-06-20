@@ -79,6 +79,9 @@ git clone https://github.com/MagneDavidsen/dotfiles-zsh.git ~/.dotfiles # TODO: 
 echo "Linking .zshrc"
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
+echo "Show hidden files"
+defaults write com.apple.finder AppleShowAllFiles YES
+
 #TODO: Settings (keyboard delay++)
 
 exit 0
