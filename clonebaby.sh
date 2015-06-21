@@ -56,6 +56,7 @@ apps=(
   vagrant
   shiori
   atom
+  sourcetree
   mailbox
   vlc
   slack
@@ -71,7 +72,7 @@ brew tap caskroom/versions
 echo "Installing apps.."
 brew cask install --appdir="/Applications" ${apps[@]}
 
-echo "Setting up zsh"
+echo "Installing zsh"
 curl -L http://install.ohmyz.sh | sh
 
 echo "Cloning my dotfiles"
@@ -83,6 +84,6 @@ ln -sf ~/.dotfiles/zshrc.zsh ~/.zshrc
 echo "Show hidden files"
 defaults write com.apple.finder AppleShowAllFiles YES
 
-#TODO: Settings (keyboard delay++)
+#TODO: More settings
 
 exit 0
