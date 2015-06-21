@@ -22,6 +22,9 @@ brew install findutils
 # Install Bash 4 (Hello Shellshock)
 brew install bash
 
+# Install mackup
+brew install mackup
+
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
@@ -29,7 +32,6 @@ brew install homebrew/dupes/grep
 # Install other useful binaries
 binaries=(
   python
-  sshfs
   tree
   ack
   git
@@ -47,6 +49,7 @@ brew install caskroom/cask/brew-cask
 brew cleanup
 
 apps=(
+  fantastical
   dropbox
   google-chrome
   spotify
@@ -75,15 +78,21 @@ brew cask install --appdir="/Applications" ${apps[@]}
 echo "Installing zsh"
 curl -L http://install.ohmyz.sh | sh
 
+echo "Installing zshmarks"
+git clone https://github.com/jocelynmallon/zshmarks.git ~/.oh-my-zsh/custom/plugins/zshmarks
+
 echo "Cloning my dotfiles"
 git clone https://github.com/MagneDavidsen/dotfiles-zsh.git ~/.dotfiles # TODO: Check if directory exists
 
 echo "Linking .zshrc"
 ln -sf ~/.dotfiles/zshrc.zsh ~/.zshrc
 
+echo "Linking mackup config"
+ln -sf ~/.dotfiles/mackup.cfg ~/.mackup.cfg
+
 echo "Show hidden files"
 defaults write com.apple.finder AppleShowAllFiles YES
 
-#TODO: More settings 
+#TODO: More settings
 
 exit 0
