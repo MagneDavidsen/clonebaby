@@ -84,6 +84,6 @@ ln -sf ~/.dotfiles/zshrc.zsh ~/.zshrc
 echo "Show hidden files"
 defaults write com.apple.finder AppleShowAllFiles YES
 
-#TODO: More settings
+#TODO: More settings 
 
 exit 0
