@@ -49,6 +49,7 @@ brew install caskroom/cask/brew-cask
 brew cleanup
 
 apps=(
+  intellij-idea
   fantastical
   dropbox
   google-chrome
@@ -90,8 +91,10 @@ ln -sf ~/.dotfiles/zshrc.zsh ~/.zshrc
 echo "Linking mackup config"
 ln -sf ~/.dotfiles/mackup.cfg ~/.mackup.cfg
 
-echo "Show hidden files"
+echo "Changing some settings"
 defaults write com.apple.finder AppleShowAllFiles YES
+defaults write -g InitialKeyRepeat -int 5 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 #TODO: More settings
 
