@@ -25,6 +25,9 @@ brew install bash
 # Install mackup
 brew install mackup
 
+# Install postgres
+brew install postgresql
+
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
@@ -49,6 +52,7 @@ brew install caskroom/cask/brew-cask
 brew cleanup
 
 apps=(
+  heroku-toolbelt
   intellij-idea
   fantastical
   dropbox
@@ -93,7 +97,7 @@ ln -sf ~/.dotfiles/mackup.cfg ~/.mackup.cfg
 
 echo "Changing some settings"
 defaults write com.apple.finder AppleShowAllFiles YES
-defaults write -g InitialKeyRepeat -int 5 # normal minimum is 15 (225 ms)
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 #TODO: More settings
