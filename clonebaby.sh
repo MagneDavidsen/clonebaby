@@ -52,11 +52,14 @@ brew install caskroom/cask/brew-cask
 brew cleanup
 
 apps=(
+  1password
   heroku-toolbelt
   intellij-idea
   fantastical
   dropbox
   google-chrome
+  google-drive
+  divvy
   spotify
   java
   iterm2
