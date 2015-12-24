@@ -95,6 +95,9 @@ git clone https://github.com/MagneDavidsen/dotfiles-zsh.git ~/.dotfiles # TODO: 
 echo "Linking .zshrc"
 ln -sf ~/.dotfiles/zshrc.zsh ~/.zshrc
 
+echo "Linking .ssh"
+ln -sf ~/Dropbox/.ssh ~/
+
 echo "Linking mackup config"
 ln -sf ~/.dotfiles/mackup.cfg ~/.mackup.cfg
 
