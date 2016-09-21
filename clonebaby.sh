@@ -40,6 +40,10 @@ binaries=(
   git
   hub
   node
+  autojump
+  go
+  erlang
+  elixir
 )
 
 # Install the binaries
@@ -59,22 +63,23 @@ apps=(
   dropbox
   google-chrome
   google-drive
-  divvy
+  rescuetime
   spotify
   java
   iterm2
   virtualbox
   vagrant
-  shiori
   atom
   sourcetree
-  mailbox
   vlc
   slack
   qlcolorcode
   quicklook-json
   qlmarkdown
   qlstephen
+  postico
+  postman
+  numi
 )
 
 # Adding beta versions
