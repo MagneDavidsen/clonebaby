@@ -44,6 +44,7 @@ binaries=(
   go
   erlang
   elixir
+  m-cli
 )
 
 # Install the binaries
@@ -95,21 +96,25 @@ echo "Installing zshmarks"
 git clone https://github.com/jocelynmallon/zshmarks.git ~/.oh-my-zsh/custom/plugins/zshmarks
 
 echo "Cloning my dotfiles"
-git clone https://github.com/MagneDavidsen/dotfiles-zsh.git ~/.dotfiles # TODO: Check if directory exists
+git clone https://github.com/MagneDavidsen/dotfiles-zsh.git ~/git/setup/dotfiles # TODO: Check if directory exists
 
 echo "Linking .zshrc"
-ln -sf ~/.dotfiles/zshrc.zsh ~/.zshrc
+ln -sf ~/git/setup/dotfiles/zshrc.zsh ~/.zshrc
 
 echo "Linking .ssh"
 ln -sf ~/Dropbox/.ssh ~/
 
 echo "Linking mackup config"
-ln -sf ~/.dotfiles/mackup.cfg ~/.mackup.cfg
+ln -sf ~/git/setup/dotfiles/mackup.cfg ~/.mackup.cfg
 
 echo "Changing some settings"
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g com.apple.mouse.scaling 4.5
+defaults write com.apple.Dock orientation -string left
+
 
 #TODO: More settings
 
