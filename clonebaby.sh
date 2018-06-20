@@ -114,7 +114,7 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write -g com.apple.mouse.scaling 4.5
 defaults write com.apple.Dock orientation -string left
-
+# defaults write -g com.apple.keyboard.fnState -boolean true
 
 #TODO: More settings
 
