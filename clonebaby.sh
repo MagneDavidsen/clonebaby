@@ -70,6 +70,8 @@ apps=(
   postico
   postman
   numi
+  visual-studio-code
+  signal
 )
 
 echo "Installing apps.."
