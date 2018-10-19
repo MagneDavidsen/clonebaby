@@ -50,27 +50,16 @@ binaries=(
 # Install the binaries
 brew install ${binaries[@]}
 
-# Install Cask
-brew install caskroom/cask/brew-cask
-
 # Remove outdated versions from the cellar
 brew cleanup
 
 apps=(
   1password
-  heroku-toolbelt
-  intellij-idea
   fantastical
   dropbox
-  google-chrome
-  google-drive
-  rescuetime
   spotify
   java
   iterm2
-  virtualbox
-  vagrant
-  atom
   sourcetree
   vlc
   slack
@@ -82,9 +71,6 @@ apps=(
   postman
   numi
 )
-
-# Adding beta versions
-brew tap caskroom/versions
 
 echo "Installing apps.."
 brew cask install --appdir="/Applications" ${apps[@]}
