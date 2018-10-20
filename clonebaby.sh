@@ -89,6 +89,9 @@ git clone https://github.com/MagneDavidsen/dotfiles-zsh.git ~/git/setup/dotfiles
 echo "Linking .zshrc"
 ln -sf ~/git/setup/dotfiles/zshrc.zsh ~/.zshrc
 
+echo "Linking .gitconfig"
+ln -sf ~/git/setup/dotfiles/gitconfig ~/.gitconfig
+
 echo "Linking .ssh"
 ln -sf ~/Dropbox/.ssh ~/
 
