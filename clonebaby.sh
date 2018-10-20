@@ -92,17 +92,16 @@ ln -sf ~/git/setup/dotfiles/zshrc.zsh ~/.zshrc
 echo "Linking .ssh"
 ln -sf ~/Dropbox/.ssh ~/
 
-echo "Linking mackup config"
-ln -sf ~/git/setup/dotfiles/mackup.cfg ~/.mackup.cfg
-
 echo "Changing some settings"
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write -g com.apple.mouse.scaling 4.5
-defaults write com.apple.Dock orientation -string left
-# defaults write -g com.apple.keyboard.fnState -boolean true
+defaults write com.apple.Dock orientation -string left # set dock to left
+defaults write com.apple.dock tilesize -int 32 # set dock size
+killall Dock
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true # stop Photos from opening when phone is connected
 
 #TODO: More settings
 
